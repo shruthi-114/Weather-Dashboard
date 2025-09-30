@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🌦 Dynamic Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider"></span>
+        </label>
+        <p>🌙 Toggle Day/Night</p>
+    </div>
+
+    <div class="app-container">
+        <h1>🌎 Dynamic Weather Dashboard</h1>
+        <p>Stay updated with live weather around the world.</p>
+
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Type any city name...">
+            <button onclick="getWeather()">Get Weather</button>
+        </div>
+
+        
+        <p>Or pick a popular city:</p>
+        <select id="quickCity" onchange="getWeatherFromDropdown()">
+            <option value="">-- Select a city --</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="London">London</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="New York">New York</option>
+        </select>
+
+        
+        <div id="weatherResult" class="result-box">
+            <p>Weather details will appear here...</p>
+        </div>
+
+        
+        <div id="forecastResult" class="forecast-box">
+            <p>5-day forecast will appear here...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap API</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
